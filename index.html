@@ -5,18 +5,325 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css">
-    <title>PixiJS - Template</title>
+    <!-- <link rel="stylesheet" href="book.css" /> -->
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="stylesheet" href="contact1.css" />
+    <link rel="stylesheet" href="review1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/daacfc3420.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Apsara Theatre</title>
+    <style>
+        body {
+        font-family: 'Georgia', serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #fff;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        header h1 {
+        font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* dark overlay */
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 2;
+            font-size: 2.5em;
+            font-weight: bold;
+            line-height: 1.3;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+
+
+        .section {
+        padding: 40px 60px;
+        }
+
+        .section h2 {
+        font-size: 28px;
+        border-bottom: 3px solid #c43;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        }
+
+        .content-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: flex-start;
+        }
+
+        .content-container img {
+        width: 250px;
+        border-radius: 10px;
+        }
+
+        .text {
+        flex: 1;
+        min-width: 250px;
+        }
+
+        @media screen and (max-width: 768px) {
+        .content-container {
+            flex-direction: column;
+        }
+
+        .content-container img {
+            width: 100%;
+        }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>hi this is cambodian theaters</h1>
-    <p>This is  Lorem ipsum</p>
+    <header>
+    <a href="about_theatre.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
+    <img src="https://th.bing.com/th/id/OIP.NryVwkBzSIqhr87rObPDzQHaHa?rs=1&pid=ImgDetMain" alt="Apsara Logo" style="height: 40px; margin-right: 15px;">
+    <h1 style="margin: 0;">Apsara Theatre</h1>
+    </a>
+
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+        <a href="#" style="background: yellow; color: black; padding: 5px 10px; border-radius: 5px;">Buy Tickets</a>
+    </nav>
+    </header>
+
+
+    <div class="hero-container">
+    <img src="https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Camb.jpg" alt="Angkor Wat">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        Welcome to Apsara Theatre<br>
+        <span style="font-weight: 400;">Discover Cambodia’s Cultural Soul</span>
+    </div>
+    </div>
+
+    <div class="section" id="main-content">
+    <!-- Dynamic content goes here -->
+    </div>
     <div id="app">
         <div id="pixi-container"></div>
     </div>
     <script type="module" src="/src/puzzle.js"></script>
-    <h1>hi this is cambodian theaters</h1>
-    <h1>hi this is cambodian theaters</h1>
-    <h1>hi this is cambodian theaters</h1>
+
+    <div class="container">
+      <div class="insta">
+        <img width=200 src="assets/Group 16.png" alt="Instagram" />
+      </div>
+      <div class="tiktok">
+        <img src="assets/Group 15.png" alt="TikTok" />
+      </div>
+      <div class="X">
+        <img width=200 src="assets/Group 14.png" alt="X" />
+      </div>
+    </div>
+
+      <div class="promo-container">
+
+    <div class="promo-card" onclick="goToBookingPage('single')">
+      <div class="label">SINGLE SEATER PROMO</div>
+      <a href="index.html"><img src="./assets/solo.jpg" alt="Single Seater" /></a>
+      <p>Best for individuals!!</p>
+      <div class="price">From $3</div>
+    </div>
+    
+    <div class="promo-card" onclick="goToBookingPage('duo')">
+      <div class="label">DUO SEATER PROMO</div>
+      <a href="index.html"><img src="/assets/duo.jpg" alt="Duo Seater" /></a>
+      <p>Best for 2 people!!</p>
+      <div class="price">From $5</div>
+    </div>
+    
+    <div class="promo-card" onclick="goToBookingPage('family')">
+      <div class="label">FAMILY BUNDLE</div>
+      <a href="index.html"><img src="/assets/family_bundle.jpeg" alt="Family Bundle" /></a>
+      <p>Best for 4 people!!</p>
+      <div class="price">From $9</div>
+    </div>
+  </div>
+
+    <div id="booking-section">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" />
+
+    <label for="time">Select Time:</label>
+    <select id="time">
+      <option value="10:00 - 11:00"> 10:00 AM - 11:00 AM</option>
+      <option value="11:00 - 12:00"> 11:00 AM - 12:00 PM</option>
+      <option value="14:00 - 15:00"> 2:00 PM - 3:00 PM</option>
+      <option value="15:00 - 16:00"> 3:00 PM - 4:00 PM</option>
+      <option value="16:00 - 17:00"> 4:00 PM - 5:00 PM</option>
+      <option value="17:00 - 18:00"> 5:00 PM - 6:00 PM</option>
+      <option value="18:00 - 19:00"> 6:00 PM - 7:00 PM</option>  
+    </select>
+
+    <button class="book-now-btn" onclick="togglePayment()">Book Now!</button>
+  </div>
+
+  <div id="payment-section" class="hidden">
+    <div class="payment-container">
+      <div class="payment-header">
+        <div>Theatre</div>
+        <div>Order №0000001</div>
+      </div>
+
+      <div class="amount">9.00 $</div>
+
+      <div class="card-section">
+        <label for="card-number">Pay by bank card</label>
+        <input class="card-input" type="text" id="card-number" placeholder="Card number" />
+        <button id="submit-payment" onclick="submitPayment()">Enter</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="other-methods-label">Other payment methods</div>
+
+      <div class="payment-options">
+        <div class="payment-button apple"> Pay</div>
+        <div class="payment-button stripe">Stripe</div>
+        <div class="payment-button paypal">PayPal</div>
+        <div class="payment-button bitcoin">₿</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-wrapper">
+    <iframe 
+        src="https://www.youtube.com/embed/qS_TzE8A4VA?autoplay=1&mute=1&loop=1&playlist=qS_TzE8A4VA"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+    </div>
+
+
+
+  <div class="abhaya-libre-extrabold">
+      <div class="container_contact">
+        <div class="contact">
+          <p id="contactus">Contact us</p>
+          <p id="email">Asparatheatre@gmail.com</p>
+          <p id="phone">+855 1234567890</p>
+        </div>
+
+        <div class="icons">
+          <p>contact with us!</p>
+          <div class="social">
+            <i class="fa-brands fa-square-instagram fa-2x"></i>
+            <i class="fa-brands fa-facebook fa-2x"></i>
+            <i class="fa-brands fa-youtube fa-2x"></i>
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    const sections = [
+        {
+        title: "Cambodian Theatre: Enjoy the lustrous beauty of the culture",
+        text: "Cambodian theatre is a rich and vibrant art form that reflects the country's history, culture, and traditions. It encompasses various styles, including traditional dance, shadow puppetry, and modern theatrical performances. It's a blend of storytelling, music, dance, and costume that brings ancient tales and modern stories to life on stage.Rooted in the royal courts of the Angkor era, many of these performances draw from the Reamker, Cambodia’s version of the Ramayana epic. Dancers wear ornate costumes and perform highly symbolic gestures, each movement conveying meaning passed down through generations. The use of masks, silk garments, and gilded headdresses enriches the visual spectacle, while classical music performed live adds depth and emotion to every scene.Beyond entertainment, Cambodian theatre serves as a cultural bridge — connecting the past to the present and preserving the identity of the Khmer people. Whether performed in sacred temples, open-air stages, or formal theatres, each show is a celebration of national heritage and resilience.",
+        img: "https://i.pinimg.com/736x/a4/56/84/a456849c8a44dde3e65a0821a0dce138.jpg"
+        },
+        {
+        title: "Apsara Theatre: A Cultural Showcase",
+        text: "The Apsara Theatre in Siem Reap offers a captivating showcase of Cambodia’s traditional performing arts, divided mainly into two categories: Classical and Folk dance. Classical dance is the highlight of the show, featuring elegant hand movements, ornate costumes, and stories rooted in Hindu and Buddhist mythology. Dancers embody celestial beings like the Apsaras—divine female spirits—using precise, symbolic gestures passed down through royal court traditions. In contrast, the theatre also presents vibrant Folk dances, which are more fast-paced and reflect everyday life in rural Cambodia. These dances incorporate simple yet energetic movements inspired by farming, fishing, and village celebrations. Set within a beautifully crafted wooden pavilion, the Apsara Theatre offers both locals and tourists a rich, cultural immersion into the heart of Khmer identity.",
+        img: "https://images.squarespace-cdn.com/content/v1/543f1c17e4b0758614131601/1713681841554-1ZZVC1BYI474U2VC25JU/Iana-Apsara-Theatre-44-Edit-2.jpg"
+        },
+        {
+        title: "Art Beyond the Stage: Cambodian Crafts and Costumes",
+        text: "Cambodian theater is a tapestry woven with intricate crafts and traditional attire, each element echoing centuries of cultural heritage. The sampot, paired with the sbai, is essential to classical dance like the Apsara performance. The krama, Cambodia’s iconic checkered scarf, represents unity and tradition. Intricately carved shadow puppets bring ancient epics like the Reamker to life in Sbek Thom performances. These artistic details aren’t just for show—they’re storytellers themselves.",
+        img: "/assets/apsara.jpg" 
+        }
+    ];
+
+    const container = document.getElementById("main-content");
+
+    sections.forEach(section => {
+        const html = `
+        <div class="section">
+            <h2>${section.title}</h2>
+            <div class="content-container">
+            <div class="text">${section.text}</div>
+            <img src="${section.img}" alt="Section image">
+            </div>
+        </div>
+        `;
+        container.innerHTML += html;
+    });
+    </script>
+    <script src="src/script.js"></script>
 </body>
 </html>

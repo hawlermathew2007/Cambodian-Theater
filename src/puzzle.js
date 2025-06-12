@@ -26,9 +26,6 @@ import { Container, Application, Assets, Sprite, Text, Graphics } from "pixi.js"
         this.name = this.name.replaceAll('"', '').toLowerCase()
         puzzleScene(this.name)
     }
-    slideInit(){
-
-    }
     displayText(){
         if(this.completed) {
             createSprite(scrollContainer, this.imgTexture, this.width*0.75, this.height*0.75, this.x - this.width/2.6, this.y - this.height/1.35).anchor.set(0.5)
