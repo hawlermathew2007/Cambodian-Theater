@@ -169,6 +169,7 @@ import { Container, Application, Assets, Sprite, Text, Graphics } from "pixi.js"
                         completedScroll.push(this.scrollName);
                         puzzleContainer.removeChildren();
                         scrollScene();
+                        showVideo();
                     })
                 } else{
                     console.log('why')
@@ -331,7 +332,7 @@ import { Container, Application, Assets, Sprite, Text, Graphics } from "pixi.js"
   app.stage.addChild(announceContainer)
 
   scrollScene()
-
+ 
   // Scenes
   async function scrollScene(){
     // Create scroll
@@ -483,6 +484,15 @@ import { Container, Application, Assets, Sprite, Text, Graphics } from "pixi.js"
            obj1Bound.y + obj1.height > obj2Bound.y &&
            obj1Bound.y < obj2Bound.y + obj2.height;
   }
+  function showVideo() {
+  
+
+
+    // Show the video section
+    const videoSection = document.getElementById("video-section");
+    console.log(videoSection)
+    videoSection.style.display = "block";
+    }
 
   app.ticker.add(slideUp);
 

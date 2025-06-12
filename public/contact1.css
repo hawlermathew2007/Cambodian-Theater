@@ -1,55 +1,73 @@
-
-.container_contact{
-    display:flow-root;
-    background-color:rgb(249, 249, 66);
-    margin:0;
-    padding:0;
-    box-sizing:border-box
-
+.container_contact {
+  background-color: #f9f942; /* bright yellow */
+  padding: 20px 40px;
+  border-radius: 0; /* remove rounding for full width */
+  width: 100vw; /* full viewport width */
+  box-sizing: border-box;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* remove margin to avoid any side spacing */
+  margin: 0;
 }
-.abhaya-libre-extrabold {
-    font-family: "Abhaya Libre", serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
 
-.contact{
-    width:70%;
-    display:flex;
-    float:left;
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#contactus {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#email,
+#phone {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons > p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social i {
+  cursor: pointer;
+  color: #222;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social i:hover {
+  color: #555;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .container_contact {
     flex-direction: column;
-    margin-left:10px;
-
-}
-
-#email{
-    position:relative;
-    margin-left:40px;
-    text-align:left;
-}
-
-#phone{
-    position:relative;
-    margin-left:40px;
-    text-align:left;
-}
-
-
-.icons{
-    float:left;
-    width:25%;
     align-items: flex-start;
-    display:inline-bolck;
-
-
+    padding: 20px;
+  }
+  .contact, .icons {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
-
-
-.social :hover{
-    color:lightgrey;
-    transition:100mx;
-
-}
-
-

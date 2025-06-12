@@ -8,7 +8,7 @@ body {
   padding: 20px;
   background: #f4f4f4;
   border-radius: 10px;
-  max-width: 100%; /* or simply remove this line */
+  max-width: 100%;
 }
 
 h1 {
@@ -90,140 +90,83 @@ p {
   padding: 15px;
   font-size: 1.2em;
 }
-
-/* ========== Booking Section ========== */
-.booking-section {
-  margin-top: 50px;
-  padding: 30px;
-  background-color: #fff;
-  border-top: 3px solid #ccc;
-}
-
-/* ========== Form Elements ========== */
-input, select, button {
+#video-section {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 10%;
+  box-sizing: border-box;
 }
 
-#time {
-  font-size: 16px;
-  padding: 10px;
-  width: 80%;
-  border-radius: 7px;
-}
-
-/* ========== Utility Classes ========== */
-.hidden {
-  display: none;
-}
-
-/* ========== Buttons ========== */
-.book-now-btn {
-  background-color: yellow;
-  color: black;
-  font-weight: bold;
+#video-section iframe {
+  width: 100%;
+  height: 500px;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.book-now-btn:hover {
-  background-color: #ffd700; /* gold */
-}
-
-/* ========== Payment Container ========== */
-.payment-container {
-  background: #fff;
-  padding: 15px;
   border-radius: 8px;
 }
+/* ========== Content Section ========== */
+.section {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
 
-.payment-header {
+.section h2 {
+  font-size: 28px;
+  border-bottom: 3px solid #c43;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content-container {
   display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
-.amount {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
+.content-container img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card-section label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.card-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 7px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-#submit-payment {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#submit-payment:hover {
-  background-color: #45a049;
-}
-
-.divider {
-  height: 1px;
-  background: #ccc;
-  margin: 15px 0;
-}
-
-/* ========== Payment Options ========== */
-.other-methods-label {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.payment-options {
-  display: flex;
-  justify-content: space-between;
-}
-
-.payment-button {
+.text {
   flex: 1;
-  text-align: center;
-  padding: 10px;
-  margin: 0 5px;
-  border-radius: 7px;
-  cursor: pointer;
-  user-select: none;
+  min-width: 250px;
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  margin-top: 10px;
 }
 
-.payment-button.apple {
-  background: #000;
-  color: white;
-}
+/* ========== Responsive Design ========== */
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.payment-button.stripe {
-  background: #6772e5;
-  color: white;
-}
+  .text {
+    font-size: 1em;
+  }
 
-.payment-button.paypal {
-  background: #003087;
-  color: white;
-}
+  .hero-text {
+    font-size: 2em;
+  }
 
-.payment-button.bitcoin {
-  background: #f7931a;
-  color: white;
-}
+  #booking-section {
+    padding: 20px;
+  }
 
+  .promo-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

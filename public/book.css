@@ -1,38 +1,58 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 500px;
+#booking-section {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
   margin: 40px auto;
-  padding: 20px;
-  background: #f4f4f4;
-  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-input, select, button {
+#booking-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+}
+
+#booking-section input[type="text"],
+#booking-section input[type="date"],
+#booking-section select {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-#time {
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
   font-size: 16px;
-  padding: 10px;
-  width: 80%; 
-  border-radius: 7px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
+#booking-section input[type="text"]:focus,
+#booking-section input[type="date"]:focus,
+#booking-section select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px #4caf50aa;
 }
 
 .book-now-btn {
-  background-color: yellow;
-  color: black;
-  font-weight: bold;
+  width: 100%;
+  background-color: #ffd700; /* bright yellow */
+  color: #222;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.5);
 }
 
 .book-now-btn:hover {
-  background-color: #ffd700; /* gold */
+  background-color: #e6c200; /* darker gold */
+  box-shadow: 0 6px 12px rgba(230, 194, 0, 0.6);
 }

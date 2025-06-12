@@ -1,14 +1,12 @@
 function togglePayment() {
-  const name = document.getElementById('name').value;
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
 
-  if (!name || !date || !time) {
-    alert("Please fill in all booking details.");
-    return;
-  }
+  document.getElementById("payment-section").style.display = 'block';
 
-  document.getElementById('payment-section').classList.remove('hidden');
+
+  document.getElementById("payment-amount").innerText = `$${window.selectedPrice}`;
+
+
+  window.scrollTo(0, document.getElementById("payment-section").offsetTop);
 }
 
 function submitPayment() {
@@ -20,4 +18,18 @@ function submitPayment() {
   
   window.location.href = 'confirmation.html';
 }
+
+function updatePrice(promoCard) {
+  
+  const price = promoCard.getAttribute('data-price');
+
+
+  document.getElementById("total-amount").innerText = `$${price}`;
+
+ 
+  window.selectedPrice = price;  
+}
+
+
+
 
